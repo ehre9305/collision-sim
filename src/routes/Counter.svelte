@@ -2,9 +2,7 @@
 	import { spring } from 'svelte/motion';
 	import Pool from '$lib/Pool.svelte';
 
-	import type { Ball } from '../lib/pool';
 	import { processCollision, getWallCollision } from '../lib/pool';
-	import { onMount } from 'svelte';
 
 	const inline = [
 		{ position: { x: 15, y: 10 }, velocity: { x: 5, y: 0 }, radius: 1, mass: 1 },
@@ -36,9 +34,83 @@
 		{ position: { x: 10, y: 5 }, velocity: { x: 0, y: 0 }, radius: 0.5, mass: 1 },
 		{ position: { x: 10, y: 5 }, velocity: { x: 0, y: 0 }, radius: 0.5, mass: 1 },
 		{ position: { x: 10, y: 5 }, velocity: { x: 0, y: 0 }, radius: 0.5, mass: 1 },
+		{ position: { x: 10, y: 5 }, velocity: { x: 0, y: 0 }, radius: 0.5, mass: 1 },
+		{ position: { x: 10, y: 5 }, velocity: { x: 0, y: 0 }, radius: 0.5, mass: 1 },
+		{ position: { x: 10, y: 5 }, velocity: { x: 0, y: 0 }, radius: 0.5, mass: 1 },
+		{ position: { x: 10, y: 5 }, velocity: { x: 0, y: 0 }, radius: 0.5, mass: 1 },
+		{ position: { x: 10, y: 5 }, velocity: { x: 0, y: 0 }, radius: 0.5, mass: 1 },
+		{ position: { x: 10, y: 5 }, velocity: { x: 0, y: 0 }, radius: 0.5, mass: 1 },
+		{ position: { x: 10, y: 5 }, velocity: { x: 0, y: 0 }, radius: 0.5, mass: 1 },
+		{ position: { x: 10, y: 5 }, velocity: { x: 0, y: 0 }, radius: 0.5, mass: 1 },
+		{ position: { x: 10, y: 5 }, velocity: { x: 0, y: 0 }, radius: 0.5, mass: 1 },
+		{ position: { x: 10, y: 5 }, velocity: { x: 0, y: 0 }, radius: 0.5, mass: 1 },
+		{ position: { x: 10, y: 5 }, velocity: { x: 0, y: 0 }, radius: 0.5, mass: 1 },
+		{ position: { x: 10, y: 5 }, velocity: { x: 0, y: 0 }, radius: 0.5, mass: 1 },
+		{ position: { x: 10, y: 5 }, velocity: { x: 0, y: 0 }, radius: 0.5, mass: 1 },
+		{ position: { x: 10, y: 5 }, velocity: { x: 0, y: 0 }, radius: 0.5, mass: 1 },
+		{ position: { x: 10, y: 5 }, velocity: { x: 0, y: 0 }, radius: 0.5, mass: 1 },
+		{ position: { x: 10, y: 5 }, velocity: { x: 0, y: 0 }, radius: 0.5, mass: 1 },
+		{ position: { x: 10, y: 5 }, velocity: { x: 0, y: 0 }, radius: 0.5, mass: 1 },
+		{ position: { x: 10, y: 5 }, velocity: { x: 0, y: 0 }, radius: 0.5, mass: 1 },
+		{ position: { x: 10, y: 5 }, velocity: { x: 0, y: 0 }, radius: 0.5, mass: 1 },
+		{ position: { x: 10, y: 5 }, velocity: { x: 0, y: 0 }, radius: 0.5, mass: 1 },
+		{ position: { x: 10, y: 5 }, velocity: { x: 0, y: 0 }, radius: 0.5, mass: 1 },
+		{ position: { x: 10, y: 5 }, velocity: { x: 0, y: 0 }, radius: 0.5, mass: 1 },
+		{ position: { x: 10, y: 5 }, velocity: { x: 0, y: 0 }, radius: 0.5, mass: 1 },
+		{ position: { x: 10, y: 5 }, velocity: { x: 0, y: 0 }, radius: 0.5, mass: 1 },
+		{ position: { x: 10, y: 5 }, velocity: { x: 0, y: 0 }, radius: 0.5, mass: 1 },
+		{ position: { x: 10, y: 5 }, velocity: { x: 0, y: 0 }, radius: 0.5, mass: 1 },
+		{ position: { x: 10, y: 5 }, velocity: { x: 0, y: 0 }, radius: 0.5, mass: 1 },
+		{ position: { x: 10, y: 5 }, velocity: { x: 0, y: 0 }, radius: 0.5, mass: 1 },
+		{ position: { x: 10, y: 5 }, velocity: { x: 0, y: 0 }, radius: 0.5, mass: 1 },
+		{ position: { x: 10, y: 5 }, velocity: { x: 0, y: 0 }, radius: 0.5, mass: 1 },
+		{ position: { x: 10, y: 5 }, velocity: { x: 0, y: 0 }, radius: 0.5, mass: 1 },
+		{ position: { x: 10, y: 5 }, velocity: { x: 0, y: 0 }, radius: 0.5, mass: 1 },
+		{ position: { x: 10, y: 5 }, velocity: { x: 0, y: 0 }, radius: 0.5, mass: 1 },
+		{ position: { x: 10, y: 5 }, velocity: { x: 0, y: 0 }, radius: 0.5, mass: 1 },
+		{ position: { x: 10, y: 5 }, velocity: { x: 0, y: 0 }, radius: 0.5, mass: 1 },
+		{ position: { x: 10, y: 5 }, velocity: { x: 0, y: 0 }, radius: 0.5, mass: 1 },
+		{ position: { x: 10, y: 5 }, velocity: { x: 0, y: 0 }, radius: 0.5, mass: 1 },
+		{ position: { x: 10, y: 5 }, velocity: { x: 0, y: 0 }, radius: 0.5, mass: 1 },
+		{ position: { x: 10, y: 5 }, velocity: { x: 0, y: 0 }, radius: 0.5, mass: 1 },
+		{ position: { x: 10, y: 5 }, velocity: { x: 0, y: 0 }, radius: 0.5, mass: 1 },
+		{ position: { x: 10, y: 5 }, velocity: { x: 0, y: 0 }, radius: 0.5, mass: 1 },
+		{ position: { x: 10, y: 5 }, velocity: { x: 0, y: 0 }, radius: 0.5, mass: 1 },
+		{ position: { x: 10, y: 5 }, velocity: { x: 0, y: 0 }, radius: 0.5, mass: 1 },
+		{ position: { x: 10, y: 5 }, velocity: { x: 0, y: 0 }, radius: 0.5, mass: 1 },
+		{ position: { x: 10, y: 5 }, velocity: { x: 0, y: 0 }, radius: 0.5, mass: 1 },
+		{ position: { x: 10, y: 5 }, velocity: { x: 0, y: 0 }, radius: 0.5, mass: 1 },
+		{ position: { x: 10, y: 5 }, velocity: { x: 0, y: 0 }, radius: 0.5, mass: 1 },
+		{ position: { x: 10, y: 5 }, velocity: { x: 0, y: 0 }, radius: 0.5, mass: 1 },
+		{ position: { x: 10, y: 5 }, velocity: { x: 0, y: 0 }, radius: 0.5, mass: 1 },
+		{ position: { x: 10, y: 5 }, velocity: { x: 0, y: 0 }, radius: 0.5, mass: 1 },
+		{ position: { x: 10, y: 5 }, velocity: { x: 0, y: 0 }, radius: 0.5, mass: 1 },
+		{ position: { x: 10, y: 5 }, velocity: { x: 0, y: 0 }, radius: 0.5, mass: 1 },
+		{ position: { x: 10, y: 5 }, velocity: { x: 0, y: 0 }, radius: 0.5, mass: 1 },
+		{ position: { x: 10, y: 5 }, velocity: { x: 0, y: 0 }, radius: 0.5, mass: 1 },
+		{ position: { x: 10, y: 5 }, velocity: { x: 0, y: 0 }, radius: 0.5, mass: 1 },
+		{ position: { x: 10, y: 5 }, velocity: { x: 0, y: 0 }, radius: 0.5, mass: 1 },
+		{ position: { x: 10, y: 5 }, velocity: { x: 0, y: 0 }, radius: 0.5, mass: 1 },
+		{ position: { x: 10, y: 5 }, velocity: { x: 0, y: 0 }, radius: 0.5, mass: 1 },
+		{ position: { x: 10, y: 5 }, velocity: { x: 0, y: 0 }, radius: 0.5, mass: 1 },
+		{ position: { x: 10, y: 5 }, velocity: { x: 0, y: 0 }, radius: 0.5, mass: 1 },
+		{ position: { x: 10, y: 5 }, velocity: { x: 0, y: 0 }, radius: 0.5, mass: 1 },
+		{ position: { x: 10, y: 5 }, velocity: { x: 0, y: 0 }, radius: 0.5, mass: 1 },
+		{ position: { x: 10, y: 5 }, velocity: { x: 0, y: 0 }, radius: 0.5, mass: 1 },
+		{ position: { x: 10, y: 5 }, velocity: { x: 0, y: 0 }, radius: 0.5, mass: 1 },
+		{ position: { x: 10, y: 5 }, velocity: { x: 0, y: 0 }, radius: 0.5, mass: 1 },
+		{ position: { x: 10, y: 5 }, velocity: { x: 0, y: 0 }, radius: 0.5, mass: 1 },
+		{ position: { x: 10, y: 5 }, velocity: { x: 0, y: 0 }, radius: 0.5, mass: 1 },
+		{ position: { x: 10, y: 5 }, velocity: { x: 0, y: 0 }, radius: 0.5, mass: 1 },
+		{ position: { x: 10, y: 5 }, velocity: { x: 0, y: 0 }, radius: 0.5, mass: 1 },
+		{ position: { x: 10, y: 5 }, velocity: { x: 0, y: 0 }, radius: 0.5, mass: 1 },
+		{ position: { x: 10, y: 5 }, velocity: { x: 0, y: 0 }, radius: 0.5, mass: 1 },
+		{ position: { x: 10, y: 5 }, velocity: { x: 0, y: 0 }, radius: 0.5, mass: 1 },
+		{ position: { x: 10, y: 5 }, velocity: { x: 0, y: 0 }, radius: 0.5, mass: 1 },
+		{ position: { x: 10, y: 5 }, velocity: { x: 0, y: 0 }, radius: 0.5, mass: 1 },
 		{ position: { x: 10, y: 5 }, velocity: { x: 0, y: 0 }, radius: 0.5, mass: 1 }
 	];
-	let pastBalls = inline;
+	let pastBalls = old;
 	let [currentBalls, time] = processCollision(pastBalls) || [pastBalls, '100000'];
 	let [futureBalls, nextTime] = processCollision(currentBalls) || [currentBalls, '0'];
 
@@ -65,17 +137,12 @@
 			setTimeout(runCollision, time * 1000);
 		}
 
-		console.log({ pastBalls, currentBalls, time });
-		console.log(JSON.stringify(currentBalls.map(getWallCollision)));
-
 		collisionFunc = (async () => {
 			[futureBalls, nextTime] = processCollision(currentBalls) || [currentBalls, '0'];
 		})();
 	}
 
-	onMount(() => setTimeout(runCollision, time * 1000));
-
-	console.log({ pastBalls, currentBalls, time });
+	// onMount(() => setTimeout(runCollision, time * 1000));
 </script>
 
 <Pool oldBalls={pastBalls} curBalls={currentBalls} {time} />

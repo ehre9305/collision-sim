@@ -28,7 +28,6 @@
 	"type": "module",
 	"dependencies": {
 		"algebrite": "^1.4.0",
-		"mathjs": "^12.4.2",
-		"nerdamer": "^1.1.13"
+		"svelte-simple-modal": "^1.6.2"
 	}
 }

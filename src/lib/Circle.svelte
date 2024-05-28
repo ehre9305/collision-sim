@@ -9,6 +9,7 @@
 	export let time: number;
 	export let hue: number;
 	export let label: string;
+	export let editCallback = () => {};
 
 	$: translateX = initialX;
 	$: translateY = initialY;
@@ -28,6 +29,7 @@
 	cy="0"
 	fill={`hsl(${hue},100%,70%)`}
 	r={radius}
+	on:click={editCallback}
 >
 </circle>
 <text
@@ -42,5 +44,6 @@
 <style>
 	text {
 		font-size: 0.5px;
+		pointer-events: none;
 	}
 </style>

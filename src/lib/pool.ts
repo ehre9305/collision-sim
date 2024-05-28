@@ -13,13 +13,10 @@ export function getRadiusSquared(a: Ball, b: Ball): number {
 }
 
 export function getColision(a: Ball, b: Ball): Time | void {
-	const times = solveCollisionTimes(a, b)
-	console.log(times)
+	const time = solveCollisionTime(a, b)
 
-	const minTime = Math.min(times[0], times[1])
-
-	if (minTime > 0) {
-		return minTime;
+	if (time > 0) {
+		return time;
 	}
 
 	return
@@ -174,7 +171,7 @@ function cloneBall(ball: Ball): Ball {
 	return JSON.parse(JSON.stringify(ball));
 }
 
-function solveCollisionTimes(b1: Ball, b2: Ball): [number, number] {
+function solveCollisionTime(b1: Ball, b2: Ball): number {
 	const { x: p1x, y: p1y } = b1.position;
 	const { x: v1x, y: v1y } = b1.velocity;
 
@@ -192,10 +189,7 @@ function solveCollisionTimes(b1: Ball, b2: Ball): [number, number] {
 	const b = 2 * (px * vx + py * vy)
 	const c = px ** 2 + py ** 2 - r ** 2
 
-	const ans1 = (-b + Math.sqrt(b ** 2 - 4 * a * c)) / (2 * a);
-	const ans2 = (-b - Math.sqrt(b ** 2 - 4 * a * c)) / (2 * a);
-
-	return [ans1, ans2]
+	return (-b - Math.sqrt(b ** 2 - 4 * a * c)) / (2 * a);
 }
 
 
