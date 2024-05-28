@@ -3,6 +3,7 @@
 	import Pool from '$lib/Pool.svelte';
 
 	import { processCollision, getWallCollision } from '../lib/pool';
+	import { onMount } from 'svelte';
 
 	const inline = [
 		{ position: { x: 15, y: 10 }, velocity: { x: 5, y: 0 }, radius: 1, mass: 1 },
@@ -110,11 +111,12 @@
 		{ position: { x: 10, y: 5 }, velocity: { x: 0, y: 0 }, radius: 0.5, mass: 1 },
 		{ position: { x: 10, y: 5 }, velocity: { x: 0, y: 0 }, radius: 0.5, mass: 1 }
 	];
+
 	let pastBalls = old;
 	let [currentBalls, time] = processCollision(pastBalls) || [pastBalls, '100000'];
 	let [futureBalls, nextTime] = processCollision(currentBalls) || [currentBalls, '0'];
 
-	let count = 0;
+	let count = 1;
 
 	const displayed_count = spring();
 	$: displayed_count.set(count);
@@ -142,7 +144,7 @@
 		})();
 	}
 
-	// onMount(() => setTimeout(runCollision, time * 1000));
+	onMount(() => setTimeout(runCollision, time * 1000));
 </script>
 
 <Pool oldBalls={pastBalls} curBalls={currentBalls} {time} />
