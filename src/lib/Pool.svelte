@@ -6,6 +6,7 @@
 	export let curBalls: Ball[];
 	export let oldBalls: Ball[];
 	export let time: number;
+	export let editCallback: (index: number) => void;
 </script>
 
 <svg viewBox={`0 0 ${TABLE.width} ${TABLE.height}`}>
@@ -18,15 +19,15 @@
 			radius={ball.radius}
 			hue={(index / oldBalls.length) * 360}
 			label={'' + ball.mass}
+			editCallback={() => editCallback(index)}
 			{time}
 		/>
-		<p>{JSON.stringify(ball)}</p>
 	{/each}
 </svg>
-<p>{JSON.stringify(curBalls)}</p>
 
 <style>
 	svg {
-		border: 3px solid red;
+		border: 3px solid black;
+		border-radius: 10px;
 	}
 </style>
